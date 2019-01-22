@@ -22,7 +22,7 @@ function WithHover(Component) {
     render() {
       return (
         <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
-          <Component hovering={this.state.hovering} />
+          <Component hovering={this.state.hovering} fontSize="30px" />
         </div>
       );
     }
@@ -30,12 +30,13 @@ function WithHover(Component) {
 }
 
 const HoverTitle = WithHover(Title);
+const HoverInfo = WithHover(Info);
 
 function App() {
   return (
     <div className="App">
       <HoverTitle />
-      <Info />
+      <HoverInfo />
     </div>
   );
 }
